@@ -14,7 +14,7 @@ export class Todo {
     @Column({ default: '#c9c9c9'})
     color: string;
 
-    @Column()
+    @Column({ default: 0 })
     order: number;
 
     @Column({ default: true})

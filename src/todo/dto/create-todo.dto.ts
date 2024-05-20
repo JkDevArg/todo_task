@@ -1,8 +1,9 @@
-import { IsBoolean, IsNumber, IsOptional, IsString } from "class-validator";
+import { IsBoolean, IsNumber, IsOptional, IsString, MinLength } from "class-validator";
 import { IsNull } from "typeorm";
 
 export class CreateTodoDto {
     @IsString()
+    @MinLength(4)
     title: string;
 
     @IsString()
